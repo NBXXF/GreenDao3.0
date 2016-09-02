@@ -15,10 +15,12 @@ public class User {
     @Id
     private String id;
     private String name;
-    @Generated(hash = 1037321026)
-    public User(String id, String name) {
+    private  String desc;
+    @Generated(hash = 891579106)
+    public User(String id, String name, String desc) {
         this.id = id;
         this.name = name;
+        this.desc = desc;
     }
     @Generated(hash = 586692638)
     public User() {
@@ -42,5 +44,11 @@ public class User {
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 '}';
+    }
+    public String getDesc() {
+        return this.desc;
+    }
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
 }

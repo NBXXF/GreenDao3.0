@@ -51,12 +51,12 @@ public class MainActivity extends Activity {
     }
 
     public void onInsert(View v) {
-        User user = new User(String.valueOf(new Random().nextInt(10)), "name_" + SystemClock.elapsedRealtime());
+        User user = new User(String.valueOf(new Random().nextInt(10)), "name_" + SystemClock.elapsedRealtime(),"");
         daoSession.insertOrReplace(user);
     }
 
     public void onUpdate(View v) {
-        User user = new User("1", "user_被update_" + SystemClock.elapsedRealtime());
+        User user = new User("1", "user_被update_" + SystemClock.elapsedRealtime(),"");
         daoSession.update(user);
     }
 
